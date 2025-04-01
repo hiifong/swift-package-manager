@@ -1224,7 +1224,7 @@ public final class RegistryClient: AsyncCancellable {
         // archive field
         body.append(contentsOf: """
         --\(boundary)\r
-        Content-Disposition: form-data; name=\"source-archive\"\r
+        Content-Disposition: form-data; name=\"source-archive\"; filename:\"\(registryIdentity.scope).\(registryIdentity.name).\(packageVersion).zip\"\r
         Content-Type: application/zip\r
         Content-Transfer-Encoding: binary\r
         \r\n
